@@ -1,0 +1,48 @@
+configuration {
+    show-icons: true;
+}
+
+* {
+    background-color: transparent;
+    text-color: #5e4c26;
+}
+
+window {
+    background-color: #131211;
+    border: 1px;
+    border-color: #131211;
+    border-radius: 30px;
+    padding: 10px;
+       
+}
+
+mainbox {
+    children: [ listview ];
+}
+
+listview {
+    flow: vertical; 
+    spacing: 5px;
+    
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+element-icon {
+    size: 48px;
+    cursor: inherit;
+}
+
+element-text {
+    enabled: false;
+ 
+}
+
+element.selected {
+    background-color: #5e4c26;
+}

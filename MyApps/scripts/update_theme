@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# ملف بسيط لتحديث theme.rasi
+
+# تحميل ملف الألوان
+source "$(dirname "$0")/colors.sh"
+
+# المسار الأساسي للبرنامج (يتم تحديده تلقائياً)
+MY_APPS_BASE_DIR="$BASE_DIR"
+SOURCE_THEME="$MY_APPS_BASE_DIR/themes/theme.rasi"
+TARGET_THEME="$HOME/.config/rofi/theme.rasi"
+
+# إنشاء مجلد rofi إذا لم يكن موجوداً
+mkdir -p "$HOME/.config/rofi"
+
+# نسخ الملف
+if [ -f "$SOURCE_THEME" ]; then
+    cp "$SOURCE_THEME" "$TARGET_THEME"
+    print_success "Theme updated successfully!"
+    echo "   From: $SOURCE_THEME"
+    echo "   To: $TARGET_THEME"
+else
+    print_error "Source theme not found at $SOURCE_THEME"
+    exit 1
+fi
