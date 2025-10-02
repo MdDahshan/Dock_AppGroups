@@ -1,6 +1,4 @@
-Here’s a polished and more engaging version of your README section, with improved clarity, formatting, and professionalism while keeping it simple:
 
----
 
 #  Dock_AppGroups
 
